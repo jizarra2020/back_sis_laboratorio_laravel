@@ -1,5 +1,7 @@
 <?php
+
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,19 +20,18 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-route::group(["prefix" => "/v1/auth"],function() {
+route::group(["prefix" => "/v1/auth"], function () {
     Route::post("/login", [AuthController::class, "login"]);
-    Route::post("/registro",[AuthController::class, "registrar"]);
+    Route::post("/registro", [AuthController::class, "registrar"]);
 
-    route::group(["middleware" => "auth:sanctum"],function() {
-        route::get("/perfil",[AuthController::class,"perfil"]);
-        route::post("/logout",[AuthController::class,"salir"]);
-
+    route::group(["middleware" => "auth:sanctum"], function () {
+        route::get("/perfil", [AuthController::class, "perfil"]);
+        route::post("/logout", [AuthController::class, "salir"]);
     });
-
-    });
-
-
-    // nuevo cambio
+});
 
 
+route::group(["middleware" => "auth:sanctum"],function() {
+   //rutas seguras
+   Route::apiResource("/usuario",UsuarioController::class);
+});

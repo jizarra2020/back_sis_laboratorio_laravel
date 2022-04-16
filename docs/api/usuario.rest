@@ -1,0 +1,3 @@
+GET http://127.0.0.1:8000/api/usuario?page=3
+Accept: application/json
+Authorization: Bearer 8|ywbKoeeSKmy7qhA4wHJt3QLPXDFCGwgF2kKbi5Wa
