@@ -10,3 +10,4 @@ si ya existe el proyecto clonar
 si es nuevo el proyecto  : INIT
 
 >git init
+
