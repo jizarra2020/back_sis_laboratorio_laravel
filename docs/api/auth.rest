@@ -1,0 +1,29 @@
+POST http://127.0.0.1:8000/api/v1/auth/registro
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "juvenalib",
+    "email": "juvenalib@gmail.com",
+    "password": "admin54321"
+}
+
+### Login
+POST http://127.0.0.1:8000/api/v1/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "juvenalib@gmail.com",
+    "password": "admin54321"
+}
+
+### perfil usuario
+GET  http://127.0.0.1:8000/api/v1/auth/perfil
+Accept: application/json
+Authorization: Bearer 7|bsGRJNENM6dTcU8iuGJdA8odoK2QUqUNet3NnDlY
+
+### salir o logout usuario
+POST http://127.0.0.1:8000/api/v1/auth/logout
+Accept: application/json
+Authorization: Bearer 7|bsGRJNENM6dTcU8iuGJdA8odoK2QUqUNet3NnDlY

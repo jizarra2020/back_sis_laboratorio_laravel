@@ -1,0 +1,12 @@
+PARA LA CONFIGURACION
+$ git config --global user.name "Juvenal Izarra"
+$ git config --global user.email ibjuvenal@gmail.com
+
+
+si ya existe el proyecto clonar
+
+>git clone direccion_del_proyecto
+
+si es nuevo el proyecto  : INIT
+
+>git init
